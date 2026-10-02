@@ -6,14 +6,14 @@ import Footer from "@/components/Footer";
 const cormorant = Cormorant_Garamond({ subsets: ["latin"], variable: "--font-cormorant", weight: ["400", "500", "600", "700"], style: ["normal", "italic"], display: "swap" });
 const jost = Jost({ subsets: ["latin"], variable: "--font-jost", display: "swap" });
 
-const __jsonld = {"@context":"https://schema.org","@type":"RealEstateAgent","name":"Lumora","description":"Marketplace properti premium","url":"https://properti-lumora.vercel.app","areaServed":"ID"};
+const __jsonld = {"@context":"https://schema.org","@type":"RealEstateAgent","name":"Lumora","description":"Enam hunian mewah di Bali dan Jakarta, masing-masing dipegang satu konselor. Susun hari kunjungan privat untuk beberapa hunian sekaligus.","url":"https://properti-lumora.vercel.app","areaServed":"ID"};
 
 export const metadata = {
   metadataBase: new URL("https://properti-lumora.vercel.app"),
-  title: "Lumora — Properti Premium Pilihan",
-  description: "Marketplace properti premium: hunian, villa, dan ruang eksklusif di lokasi terbaik se-Indonesia.",
+  title: { default: "Lumora — Hunian mewah, dikunjungi secara privat", template: "%s — Lumora" },
+  description: "Enam hunian mewah di Bali dan Jakarta, masing-masing dipegang satu konselor. Susun hari kunjungan privat untuk beberapa hunian sekaligus.",
   applicationName: "Lumora",
-  keywords: ["properti premium", "villa mewah", "hunian eksklusif", "luxury property", "real estate"],
+  keywords: ["villa mewah Bali", "rumah mewah Jakarta", "penthouse", "kunjungan privat", "properti mewah"],
   authors: [{ name: "Lumora" }],
   creator: "Lumora",
   publisher: "Lumora",
@@ -23,14 +23,14 @@ export const metadata = {
     locale: "id_ID",
     url: "https://properti-lumora.vercel.app",
     siteName: "Lumora",
-    title: "Lumora — Properti Premium Pilihan",
-    description: "Marketplace properti premium: hunian, villa, dan ruang eksklusif di lokasi terbaik se-Indonesia.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Lumora — Properti Premium Pilihan" }],
+    title: "Lumora — Hunian mewah, dikunjungi secara privat",
+    description: "Enam hunian mewah di Bali dan Jakarta, masing-masing dipegang satu konselor. Susun hari kunjungan privat untuk beberapa hunian sekaligus.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Lumora — Hunian mewah, dikunjungi secara privat" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lumora — Properti Premium Pilihan",
-    description: "Marketplace properti premium: hunian, villa, dan ruang eksklusif di lokasi terbaik se-Indonesia.",
+    title: "Lumora — Hunian mewah, dikunjungi secara privat",
+    description: "Enam hunian mewah di Bali dan Jakarta, masing-masing dipegang satu konselor. Susun hari kunjungan privat untuk beberapa hunian sekaligus.",
     images: ["/og.jpg"],
   },
   robots: {
@@ -42,8 +42,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id">
-      <body className={`${cormorant.variable} ${jost.variable} antialiased`}>
+    <html lang="id" className={`${cormorant.variable} ${jost.variable}`}>
+      <body className="antialiased">
         <div className="grain" aria-hidden="true" />
         <Navbar />
         {children}

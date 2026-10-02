@@ -8,7 +8,7 @@ export default function PageHeader({ kicker, title, subtitle }) {
         <Reveal>
           {kicker && <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-gold">{kicker}</p>}
           <h1 className="max-w-3xl font-display text-4xl leading-tight md:text-6xl">{title}</h1>
-          {subtitle && <p className="mt-4 max-w-2xl text-cream/75">{subtitle}</p>}
+          {subtitle && <p className="mt-4 max-w-2xl text-cream/90">{subtitle}</p>}
         </Reveal>
       </div>
     </section>
