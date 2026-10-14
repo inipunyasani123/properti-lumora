@@ -2,7 +2,7 @@
 
 Koleksi enam hunian mewah di Bali dan Jakarta, tanpa open house. Gelap–emas dengan Cormorant Garamond dan slideshow layar penuh (bisa dijeda).
 
-**Demo live:** https://properti-lumora.vercel.app
+**Demo live:** https://properti-lumora.pintuweb.id
 
 ![Tangkapan layar Lumora](public/og.jpg)
 
