@@ -115,7 +115,7 @@ export default function ListingsClient() {
         {list.length === 0 && (
           <div className="rounded-2xl border border-dashed border-black/15 bg-white/50 py-20 text-center">
             <p className="font-display text-2xl text-ink">Tidak ada properti yang cocok</p>
-            <p className="mt-2 text-muted">Coba ubah atau reset filter pencarianmu.</p>
+            <p className="mt-2 text-muted">Coba ubah atau atur ulang filter pencarian Anda.</p>
             <button type="button" onClick={reset} className="mt-5 min-h-11 rounded-full bg-forest px-6 py-2.5 text-sm font-semibold text-cream transition hover:bg-forest-soft">Reset filter</button>
           </div>
         )}

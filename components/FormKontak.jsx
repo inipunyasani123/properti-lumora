@@ -43,7 +43,7 @@ export default function FormKontak() {
         <h2 ref={judul} tabIndex={-1} className="mt-4 font-display text-2xl text-ink outline-none">Terima kasih, {form.nama.trim().split(' ')[0]}</h2>
         <p className="mx-auto mt-2 max-w-md text-muted">
           Topik: {TOPIK.find(([v]) => v === form.topik)[1].toLowerCase()}. {site.name} adalah situs contoh, jadi pesan ini tidak dikirim ke mana pun.
-          {form.topik === 'jual' ? ' Di layanan sungguhan, konsultan akan menghubungimu untuk menjadwalkan kunjungan penilaian.' : ' Di layanan sungguhan, balasan dikirim ke email yang kamu tulis.'}
+          {form.topik === 'jual' ? ' Di layanan sungguhan, konsultan akan menghubungi Anda untuk menjadwalkan kunjungan penilaian.' : ' Di layanan sungguhan, balasan dikirim ke email yang Anda tulis.'}
         </p>
         <button type="button" onClick={() => { setSent(false); setForm(KOSONG); }} className="mt-6 min-h-11 rounded-full border border-black/10 px-6 py-2.5 text-sm font-semibold text-ink transition hover:border-forest hover:text-forest">Tulis pesan lain</button>
       </div>
@@ -63,7 +63,7 @@ export default function FormKontak() {
         </select>
       </label>
       <label className={label}>Pesan
-        <textarea name="pesan" value={form.pesan} onChange={handle} rows={6} required placeholder={form.topik === 'jual' ? 'Jenis properti, kawasan, perkiraan luas, dan kapan bisa dikunjungi.' : 'Tulis pertanyaanmu.'} className={`${field} resize-none`} />
+        <textarea name="pesan" value={form.pesan} onChange={handle} rows={6} required placeholder={form.topik === 'jual' ? 'Jenis properti, kawasan, perkiraan luas, dan kapan bisa dikunjungi.' : 'Tulis pertanyaan Anda.'} className={`${field} resize-none`} />
       </label>
       <button type="submit" className="w-full rounded-xl bg-forest py-3.5 font-semibold text-cream transition hover:bg-forest-soft">Kirim pesan</button>
       <p className="text-center text-xs text-muted">Purwarupa: formulir ini tidak mengirim data.</p>
