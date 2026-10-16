@@ -11,7 +11,7 @@ export default function PropertyCard({ item }) {
       <div className="relative h-60 overflow-hidden">
         <Image src={item.media.foto[0]} alt="" fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" aria-hidden="true" />
-        <span className="absolute left-4 top-4 rounded-sm border border-gold/50 bg-black/50 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.15em] text-gold backdrop-blur">{item.status}</span>
+        <span className="absolute left-4 top-4 rounded-sm border border-gold/50 bg-black/75 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.15em] text-gold backdrop-blur">{item.status}</span>
       </div>
       <div className="p-5">
         <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-gold">{item.jenisProperti}</p>

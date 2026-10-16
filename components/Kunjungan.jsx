@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
-import { useSearchParams } from 'next/navigation';
 import { Check, Car, Clock } from 'lucide-react';
 import { properti, tempuh, hargaLabel } from '@/lib/data';
 
@@ -32,7 +31,6 @@ function hariKeDepan(n) {
 }
 
 export default function Kunjungan() {
-  const sp = useSearchParams();
   const [wilayah, setWilayah] = useState(WILAYAH[0]);
   const [pilih, setPilih] = useState([]);
   const [hari, setHari] = useState([]);
@@ -45,7 +43,7 @@ export default function Kunjungan() {
 
   useEffect(() => {
     setHari(hariKeDepan(7));
-    const p = properti.find((x) => String(x.id) === sp.get('id'));
+    const p = properti.find((x) => String(x.id) === new URLSearchParams(window.location.search).get('id'));
     if (p) { setWilayah(p.wilayah); setPilih([p.id]); }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
