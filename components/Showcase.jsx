@@ -32,7 +32,7 @@ export default function Showcase() {
     <section className="relative h-[100svh] max-h-[1000px] min-h-[560px] w-full overflow-hidden bg-sand" aria-roledescription="carousel" aria-label="Koleksi pilihan">
       {slides.map((s, idx) => (
         <div key={s.id} className={`absolute inset-0 transition-opacity duration-[1200ms] ${idx === i ? 'opacity-100' : 'opacity-0'}`} aria-hidden={idx !== i}>
-          {dimuat.includes(idx) && <Image src={s.media.foto[0]} alt="" fill priority={idx === 0} sizes="100vw" className="object-cover" />}
+          {dimuat.includes(idx) && <Image src={s.media.foto[0]} alt="" fill priority={idx === 0} fetchPriority={idx === 0 ? "high" : undefined} sizes="100vw" className="object-cover" />}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/55" aria-hidden="true" />
         </div>
       ))}

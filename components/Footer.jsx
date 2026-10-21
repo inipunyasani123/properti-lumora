@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="mt-10 border-t border-white/10 pt-6 text-center text-sm text-ink/80">
-          © {new Date().getFullYear()} {site.name} · Purwarupa desain: listing, konsultan, dan harga adalah contoh. Foto CC0.
+          © {new Date().getFullYear()} {site.name} · Purwarupa desain: listing, konsultan, dan harga adalah contoh. Foto CC0/domain publik; potret konselor berupa ilustrasi.
         </p>
       </div>
     </footer>
